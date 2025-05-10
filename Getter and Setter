@@ -1,1 +1,86 @@
+package Encapsulation;
+
+import java.util.Scanner;
+
+class College {
+	String StudentName;
+	String Department;
+	int age;
+	String ccollege = "Skasc";
+
+	College() {
+		System.out.println("Enter the constuctor value:");
+		StudentName = "Anu";
+		Department = "it";
+		age = 25;
+	}
+
+	void AssignData(String StudentName, String Department, int age) {
+		this.StudentName = StudentName;
+		this.Department = Department;
+		this.age = age;
+	}
+
+	void PrintData() {
+		System.out.println("StudentName:" + StudentName);
+		System.out.println("Department:" + Department);
+		System.out.println("age:" + age);
+		System.out.println("College:" + ccollege);
+	}
+
+	void setStudentName(String StudentName) {
+		this.StudentName = StudentName;
+	}
+
+	void setDepartment(String Department) {
+		this.Department = Department;
+	}
+
+	void setage(int age) {
+		this.age = age;
+	}
+
+	String getStudentName() {
+		return (this.StudentName);
+	}
+
+	String getDepartment() {
+		return (this.Department);
+	}
+
+	int getage() {
+		return (this.age);
+	}
+}
+
+public class GetterSetter {
+
+	public static void main(String[] args) {
+		College c1, c2, c3;
+		c1 = new College();
+		c2 = new College();
+		c3 = new College();
+
+		c1.PrintData();
+		System.out.println("................");
+
+		c1.AssignData("akii", "ct", 21);
+		c2.AssignData("Surya", "it", 18);
+		c3.AssignData("suroobs", "it", 20);
+
+		c1.PrintData();
+		System.out.println("................");
+		c2.PrintData();
+		System.out.println("................");
+		c3.PrintData();
+
+		System.out.println("................");
+
+		c1.setStudentName("abii");
+		System.out.println("Studentname:" + c1.getStudentName());
+		System.out.println("................");
+		c1.PrintData();
+
+	}
+}
 
